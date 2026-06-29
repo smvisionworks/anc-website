@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chief Whip – ANC Mpumalanga Caucus</title>
+    <title>Chief Whip â€“ ANC Mpumalanga Caucus</title>
     
     <meta name="description" content="Serving the People. Empowering Mpumalanga. Official site of the ANC Mpumalanga Caucus.">
     <meta name="theme-color" content="#00853F">
-    <meta property="og:title" content="Chief Whip – ANC Mpumalanga Caucus">
+    <meta property="og:title" content="Chief Whip â€“ ANC Mpumalanga Caucus">
     <meta property="og:description" content="Serving the People. Empowering Mpumalanga.">
     <meta property="og:image" content="main.jpg">
     <meta property="og:type" content="website">
@@ -141,7 +141,7 @@
 
         <div class="relative z-20 text-center max-w-4xl mx-auto px-6 mt-16">
             <p class="text-[#FFD700] uppercase tracking-widest font-bold text-xs md:text-sm mb-4">Office of the Chief Whip</p>
-            <h1 class="text-4xl md:text-7xl font-black tracking-tight text-white mb-6 leading-none">Office of the Chief Whip – <br><span class="text-[#00853F]">ANC Mpumalanga Caucus</span></h1>
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight text-white mb-6 leading-none">Office of the Chief Whip â€“ <br><span class="text-[#00853F]">ANC Mpumalanga Caucus</span></h1>
             <p class="text-base md:text-xl text-white/70 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
                 Serving the People. Empowering the Province. Advancing institutional transparency and structural accountability.
             </p>
@@ -184,7 +184,7 @@
             </div>
             
             <h2 class="text-3xl md:text-6xl font-black tracking-tight text-white mb-8">
-                Your Vote Shapes <span class="text-[#00853F]">Mpumalanga’s Future</span>
+                Your Vote Shapes <span class="text-[#00853F]">Mpumalangaâ€™s Future</span>
             </h2>
             <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="inline-block px-14 py-6 rounded-full text-xs md:text-sm font-black tracking-widest bg-[#00853F] hover:bg-[#FFD700] hover:text-black shadow-[0_0_50px_rgba(0,133,63,0.4)] transition-all duration-300 uppercase transform hover:-translate-y-1">
                 REGISTER TO VOTE ONLINE NOW
@@ -198,7 +198,7 @@
             <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Our Strategic Mandate</span>
             <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2 mb-6">Our Mission</h2>
             <p class="text-white/70 font-light text-lg leading-relaxed">
-                To build a united, non‑racial, non‑sexist and democratic Mpumalanga.
+                To build a united, nonâ€‘racial, nonâ€‘sexist and democratic Mpumalanga.
             </p>
         </div>
         <div class="lg:col-span-7">
@@ -263,71 +263,7 @@
         </div>
     </section>
 
-    <!-- Live Feed Component (Facebook) -->
-    <section id="live" class="py-24 bg-[#161616] border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Live Updates</span>
-                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2">Live Updates from ANC Mpumalanga Caucus</h2>
-                <p class="text-white/60 text-base font-light mt-3">Automatically pulled from our official Facebook page.</p>
-            </div>
-
-            <div class="glass-panel rounded-3xl p-6 md:p-8 shadow-2xl">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-2xl overflow-hidden border border-white/10 bg-black/30 flex items-center justify-center">
-                            <span class="text-[#FFD700] text-sm font-black">FB</span>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-bold text-lg">Live Feed</h3>
-                            <p class="text-white/50 text-sm">Newest posts first</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-3">
-                        <button id="live-refresh" type="button" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#00853F] hover:bg-[#007035] text-white shadow transition-all">
-                            Refresh
-                        </button>
-                    </div>
-                </div>
-
-                <div id="live-status" class="hidden mb-5 text-sm text-white/70">Loading…</div>
-                <div id="live-error" class="hidden mb-5 text-sm text-[#FFD700]">Unable to load the live feed right now.</div>
-
-                <div id="live-feed" class="space-y-5"></div>
-
-                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button id="live-load-more" type="button" class="px-8 py-3 rounded-full text-xs font-black tracking-widest bg-[#00853F] hover:bg-[#007035] text-white shadow-lg transition-all uppercase">
-                        Load More
-                    </button>
-                    <div id="live-end" class="hidden text-white/50 text-sm">No more posts.</div>
-                </div>
-
-                <div id="live-sentinel" class="h-1 w-full mt-10"></div>
-
-                <template id="live-post-template">
-                    <article class="group p-5 rounded-2xl border border-white/10 bg-black/20 hover:bg-white/[0.04] transition-all">
-                        <div class="flex items-start gap-4">
-                            <img class="live-avatar w-12 h-12 rounded-xl object-cover border border-white/10 bg-black/30" alt="Avatar">
-                            <div class="flex-1">
-                                <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
-                                    <p class="live-author text-white font-bold text-sm"></p>
-                                    <span class="live-timestamp text-white/50 text-xs"></span>
-                                    <a class="live-permalink text-[#FFD700] text-xs font-bold uppercase tracking-wider hover:underline" target="_blank" rel="noopener noreferrer">View</a>
-                                </div>
-
-                                <p class="live-message text-white/80 text-sm mt-2 leading-relaxed whitespace-pre-wrap"></p>
-
-                                <div class="live-media mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
-
-                                <div class="live-links mt-4 space-y-2"></div>
-                            </div>
-                        </div>
-                    </article>
-                </template>
-            </div>
-        </div>
-    </section>
+    <!-- Live Feed Component (Facebook Embed) -->`n    <section id="live" class="py-24 bg-[#161616] border-y border-white/5">`n        <div class="max-w-7xl mx-auto px-6">`n            <div class="text-center max-w-3xl mx-auto mb-10">`n                <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Live Updates</span>`n                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2">Live Updates from ANC Mpumalanga Caucus</h2>`n                <p class="text-white/60 text-base font-light mt-3">Live timeline from our official Facebook page.</p>`n            </div>`n            <div class="glass-panel rounded-3xl p-6 md:p-8 shadow-2xl">`n                <div id="fb-root"></div>`n                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v20.0"></script>`n                <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=61575931708911" data-tabs="timeline" data-width="" data-height="900" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">`n                    <blockquote cite="https://www.facebook.com/profile.php?id=61575931708911" class="fb-xfbml-parse-ignore">`n                        <a href="https://www.facebook.com/profile.php?id=61575931708911">View on Facebook</a>`n                    </blockquote>`n                </div>`n            </div>`n        </div>`n    </section>
 
     <!-- Infinite Carousel Ribbon Layer -->
     <section id="moments" class="py-24 overflow-hidden bg-black">
@@ -522,208 +458,7 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
                 </iframe>`;
-        }
-
-        // Live Feed (Facebook) - requires a serverless proxy endpoint at /api/facebook-live-feed
-        const LIVE_ENDPOINT = '/api/facebook-live-feed';
-        const LIVE_PAGE_SIZE = 6;
-
-        function escapeHtml(str) {
-            return String(str ?? '')
-                .replaceAll('&', '&amp;')
-                .replaceAll('<', '<')
-                .replaceAll('>', '>')
-                .replaceAll('"', '"')
-                .replaceAll("'", '&#039;');
-        }
-
-
-        function formatTimestamp(ts) {
-            const d = ts ? new Date(ts) : null;
-            if (!d || isNaN(d.getTime())) return '';
-            return d.toLocaleString(undefined, { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-        }
-
-        function renderMedia(post, mediaWrap) {
-            const media = Array.isArray(post.media) ? post.media : [];
-            if (!media.length) return;
-
-            mediaWrap.innerHTML = '';
-
-            for (const item of media) {
-                const kind = item?.type;
-                if (kind === 'photo' && item?.url) {
-                    const img = document.createElement('img');
-                    img.src = item.url;
-                    img.alt = item.alt || post.message_preview || 'Facebook photo';
-                    img.className = 'w-full h-44 sm:h-36 rounded-2xl object-cover border border-white/10 bg-black/30';
-                    img.loading = 'lazy';
-                    mediaWrap.appendChild(img);
-                } else if (kind === 'video' && item?.embed_url) {
-                    const iframe = document.createElement('iframe');
-                    iframe.src = item.embed_url;
-                    iframe.className = 'w-full h-56 sm:h-44 rounded-2xl border border-white/10 bg-black/30';
-                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-                    iframe.loading = 'lazy';
-                    iframe.referrerPolicy = 'no-referrer-when-downgrade';
-                    mediaWrap.appendChild(iframe);
-                }
-            }
-        }
-
-        function renderLinks(post, linksWrap) {
-            const links = Array.isArray(post.links) ? post.links : [];
-            if (!links.length) return;
-
-            linksWrap.innerHTML = '';
-            for (const l of links.slice(0, 3)) {
-                const a = document.createElement('a');
-                a.href = l?.url || '#';
-                a.target = '_blank';
-                a.rel = 'noopener noreferrer';
-                a.className = 'block text-xs font-bold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors';
-                a.textContent = l?.title ? l.title : (l?.url || 'Open link');
-                linksWrap.appendChild(a);
-            }
-        }
-
-        async function fetchLivePage(cursor) {
-            const url = new URL(LIVE_ENDPOINT, window.location.origin);
-            url.searchParams.set('limit', String(LIVE_PAGE_SIZE));
-            if (cursor) url.searchParams.set('cursor', String(cursor));
-
-            const res = await fetch(url.toString(), { headers: { 'Accept': 'application/json' } });
-            if (!res.ok) throw new Error(`HTTP ${res.status}`);
-            return res.json();
-        }
-
-        function normalizePostShape(raw) {
-            // Expected from proxy:
-            // { id, author_name, author_profile_url, created_time, message, media:[{type:'photo'|'video',url,embed_url,alt}], links:[{url,title}] , permalink }
-            return {
-                id: raw?.id,
-                author_name: raw?.author_name || raw?.from?.name || '',
-                author_profile_url: raw?.author_profile_url || raw?.from?.picture?.data?.url || '',
-                created_time: raw?.created_time || raw?.created_time_iso || raw?.timestamp || '',
-                message: raw?.message || raw?.message_text || raw?.story || '',
-                permalink: raw?.permalink || raw?.url || '#',
-                media: raw?.media || [],
-                links: raw?.links || [],
-                message_preview: (raw?.message || raw?.message_text || '').slice(0, 90)
-            };
-        }
-
-        let liveCursor = null;
-        let liveLoading = false;
-        let liveHasMore = true;
-        let liveObserver = null;
-
-        function setLiveStatus(kind) {
-            const status = document.getElementById('live-status');
-            const err = document.getElementById('live-error');
-            if (!status || !err) return;
-
-            if (kind === 'loading') {
-                status.classList.remove('hidden');
-                err.classList.add('hidden');
-            } else if (kind === 'error') {
-                status.classList.add('hidden');
-                err.classList.remove('hidden');
-            } else {
-                status.classList.add('hidden');
-                err.classList.add('hidden');
-            }
-        }
-
-        function appendPosts(posts) {
-            const wrap = document.getElementById('live-feed');
-            const tmpl = document.getElementById('live-post-template');
-            if (!wrap || !tmpl) return;
-
-            for (const raw of posts) {
-                const post = normalizePostShape(raw);
-                const node = tmpl.content.cloneNode(true);
-
-                const avatar = node.querySelector('.live-avatar');
-                const authorEl = node.querySelector('.live-author');
-                const tsEl = node.querySelector('.live-timestamp');
-                const msgEl = node.querySelector('.live-message');
-                const permalinkEl = node.querySelector('.live-permalink');
-                const mediaWrap = node.querySelector('.live-media');
-                const linksWrap = node.querySelector('.live-links');
-
-                if (avatar && post.author_profile_url) avatar.src = post.author_profile_url;
-                if (avatar && !post.author_profile_url) avatar.alt = 'Avatar';
-                if (authorEl) authorEl.textContent = post.author_name || 'ANC Mpumalanga';
-                if (tsEl) tsEl.textContent = formatTimestamp(post.created_time) || '';
-                if (msgEl) msgEl.textContent = post.message || '';
-                if (permalinkEl) permalinkEl.href = post.permalink || '#';
-
-                renderMedia(post, mediaWrap);
-                renderLinks(post, linksWrap);
-
-                wrap.appendChild(node);
-            }
-        }
-
-        async function loadMoreLive({ reset = false } = {}) {
-            if (liveLoading) return;
-            if (!liveHasMore && !reset) return;
-
-            liveLoading = true;
-            setLiveStatus(reset ? 'loading' : 'loading');
-
-            const wrap = document.getElementById('live-feed');
-            const endEl = document.getElementById('live-end');
-            const btn = document.getElementById('live-load-more');
-
-            try {
-                if (reset) {
-                    if (wrap) wrap.innerHTML = '';
-                    liveCursor = null;
-                    liveHasMore = true;
-                    if (endEl) endEl.classList.add('hidden');
-                }
-
-                if (btn) btn.disabled = true;
-
-                const data = await fetchLivePage(liveCursor);
-                // Expected from proxy:
-                // { posts: [...], next_cursor: '...'|null, has_more: boolean }
-                const posts = Array.isArray(data?.posts) ? data.posts : [];
-                const nextCursor = data?.next_cursor ?? null;
-                const hasMore = data?.has_more ?? (posts.length === LIVE_PAGE_SIZE);
-
-                if (posts.length) {
-                    appendPosts(posts);
-                }
-
-                liveCursor = nextCursor;
-                liveHasMore = Boolean(hasMore && (posts.length > 0) || (nextCursor));
-
-                setLiveStatus('ok');
-
-                if (endEl) {
-                    if (!liveHasMore) endEl.classList.remove('hidden');
-                    else endEl.classList.add('hidden');
-                }
-            } catch (e) {
-                setLiveStatus('error');
-                const err = document.getElementById('live-error');
-                if (err) err.textContent = 'Unable to load the live feed right now.';
-                console.error('Live feed error:', e);
-            } finally {
-                liveLoading = false;
-                if (btn) btn.disabled = false;
-            }
-        }
-
-        function initLiveFeed() {
-            const sentinel = document.getElementById('live-sentinel');
-            const btn = document.getElementById('live-load-more');
-            const refresh = document.getElementById('live-refresh');
-
-            if (btn) btn.addEventListener('click', () => loadMoreLive({ reset: false }));
+        }`n));
             if (refresh) refresh.addEventListener('click', () => loadMoreLive({ reset: true }));
 
             if (sentinel && 'IntersectionObserver' in window) {
@@ -742,7 +477,8 @@
 
         // Run initialization routines
         initTargetElectionCountdown();
-        initLiveFeed();
+        
     </script>
 </body>
 </html>
+
