@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chief Whip – ANC Mpumalanga Caucus</title>
+    
+    <meta name="description" content="Serving the People. Empowering Mpumalanga. Official site of the ANC Mpumalanga Caucus.">
+    <meta name="theme-color" content="#00853F">
+    <meta property="og:title" content="Chief Whip – ANC Mpumalanga Caucus">
+    <meta property="og:description" content="Serving the People. Empowering Mpumalanga.">
+    <meta property="og:image" content="main.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pixel-mask {
+            background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+            background-size: 4px 4px;
+        }
+
+        /* Infinite Photo Carousel Scroll Track */
+        @keyframes infiniteScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-strip-loop {
+            display: flex;
+            width: max-content;
+            animation: infiniteScroll 45s linear infinite;
+        }
+        .animate-strip-loop:hover {
+            animation-play-state: paused;
+        }
+
+        /* Geometric pattern matching election campaign collateral */
+        .footer-banner-pattern {
+            background-color: #0d0d0d;
+            background-image: 
+                linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414),
+                linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00853F;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#00853F] selection:text-white overflow-x-hidden">
+
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-[#00853F] z-50 transition-all duration-75" style="width: 0%"></div>
+
+    <!-- Navigation Header -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-40 py-6 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl bg-cover bg-center border border-[#FFD700]/40 shadow-xl" style="background-image: url('anclogo.jpg')"></div>
+                <span class="font-bold tracking-tight text-base sm:text-lg text-white">ANC <span class="text-[#00853F]">Mpumalanga</span> Caucus</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="#home" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Home</a>
+                <a href="#mission" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Mission</a>
+                <a href="#news" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">News</a>
+                <a href="#moments" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Moments</a>
+                <a href="contact.html" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Contact</a>
+                <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#00853F] hover:bg-[#007035] text-white shadow-lg transition-transform">
+                    Register To Vote
+                </a>
+            </div>
+
+            <button id="mobile-menu-toggle" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Nav Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-30 bg-[#111111]/98 backdrop-blur-xl hidden flex-col justify-center items-center space-y-8 text-center">
+        <a href="#home" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Home</a>
+        <a href="#mission" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Mission</a>
+        <a href="#news" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">News</a>
+        <a href="#moments" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Moments</a>
+        <a href="contact.html" class="text-xl font-bold tracking-wide text-white">Contact</a>
+        <a href="https://registertovote.elections.org.za" target="_blank" class="px-8 py-3 rounded-full text-sm font-bold bg-[#00853F] text-white">Register to Vote</a>
+    </div>
+
+    <!-- Hero Framework Section -->
+    <section id="home" class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
+
+        <!-- Aesthetic Mouse Scroll Icon -->
+        <a href="#register" aria-label="Scroll to countdown" class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center text-white/70 hover:text-white/90 transition-colors" >
+            <div class="w-7 h-12 rounded-full border border-white/30 relative overflow-hidden">
+                <!-- Moving dot -->
+                <div class="absolute left-1/2 -translate-x-1/2 top-3 w-1.5 h-2 rounded-full bg-[#FFD700]/85 animate-pulse" style="animation: scrollDot 1.4s ease-in-out infinite;"></div>
+            </div>
+            <span class="mt-2 text-[10px] uppercase tracking-[0.35em] font-bold">Scroll</span>
+        </a>
+
+        <!-- Animation for the mouse scroll dot -->
+        <style>
+            @keyframes scrollDot {
+                0% { transform: translate(-50%, 0); opacity: 0.7; }
+                50% { transform: translate(-50%, 10px); opacity: 1; }
+                100% { transform: translate(-50%, 0); opacity: 0.7; }
+            }
+        </style>
+
+        <div class="absolute inset-0 z-0 bg-cover bg-center opacity-25 scale-105" style="background-image: url('main.jpg'); image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;"></div>
+        <div class="absolute inset-0 z-5 pixel-mask opacity-40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-black/60 z-10"></div>
+
+        <div class="relative z-20 text-center max-w-4xl mx-auto px-6 mt-16">
+            <p class="text-[#FFD700] uppercase tracking-widest font-bold text-xs md:text-sm mb-4">Office of the Chief Whip</p>
+            <h1 class="text-4xl md:text-7xl font-black tracking-tight text-white mb-6 leading-none">Office of the Chief Whip – <br><span class="text-[#00853F]">ANC Mpumalanga Caucus</span></h1>
+            <p class="text-base md:text-xl text-white/70 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Serving the People. Empowering the Province. Advancing institutional transparency and structural accountability.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#register" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider bg-[#FFD700] text-black shadow-xl hover:bg-white transition-all">
+                    View Countdown
+                </a>
+                <a href="#news" class="w-full sm:w-auto px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider border-2 border-white/20 text-white backdrop-blur-sm hover:bg-white/10 transition-all">
+                    Latest Updates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- High-Importance Chrono Countdown Suite -->
+    <section id="register" class="relative py-28 md:py-36 bg-gradient-to-b from-[#111111] via-[#05180d] to-[#111111] border-y border-white/5 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#00853F]/15 blur-[150px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <span class="text-[#FFD700] uppercase tracking-[0.35em] font-black text-xs md:text-sm block mb-8">COUNTDOWN TO TARGET GENERATIONAL ELECTIONS</span>
+            
+            <!-- Highly Prominent Modular Digital Display -->
+            <div id="countdown-container" class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto mb-16">
+                <div class="bg-black/60 border-2 border-[#00853F]/40 rounded-[2rem] p-8 md:p-14 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.7)] flex flex-col justify-center items-center">
+                    <div id="days" class="text-6xl sm:text-7xl md:text-9xl font-black text-white font-mono tracking-tighter leading-none">000</div>
+                    <div class="text-xs md:text-base uppercase tracking-[0.2em] text-[#FFD700] font-black mt-4">Days</div>
+                </div>
+                <div class="bg-black/60 border-2 border-[#00853F]/40 rounded-[2rem] p-8 md:p-14 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.7)] flex flex-col justify-center items-center">
+                    <div id="hours" class="text-6xl sm:text-7xl md:text-9xl font-black text-white font-mono tracking-tighter leading-none">00</div>
+                    <div class="text-xs md:text-base uppercase tracking-[0.2em] text-[#FFD700] font-black mt-4">Hours</div>
+                </div>
+                <div class="bg-black/60 border-2 border-[#00853F]/40 rounded-[2rem] p-8 md:p-14 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.7)] flex flex-col justify-center items-center">
+                    <div id="minutes" class="text-6xl sm:text-7xl md:text-9xl font-black text-white font-mono tracking-tighter leading-none">00</div>
+                    <div class="text-xs md:text-base uppercase tracking-[0.2em] text-[#FFD700] font-black mt-4">Minutes</div>
+                </div>
+                <div class="bg-black/60 border-2 border-[#FFD700]/40 rounded-[2rem] p-8 md:p-14 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.7)] flex flex-col justify-center items-center">
+                    <div id="seconds" class="text-6xl sm:text-7xl md:text-9xl font-black text-[#FFD700] font-mono tracking-tighter leading-none animate-pulse">00</div>
+                    <div class="text-xs md:text-base uppercase tracking-[0.2em] text-white/60 font-black mt-4">Seconds</div>
+                </div>
+            </div>
+            
+            <h2 class="text-3xl md:text-6xl font-black tracking-tight text-white mb-8">
+                Your Vote Shapes <span class="text-[#00853F]">Mpumalanga’s Future</span>
+            </h2>
+            <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="inline-block px-14 py-6 rounded-full text-xs md:text-sm font-black tracking-widest bg-[#00853F] hover:bg-[#FFD700] hover:text-black shadow-[0_0_50px_rgba(0,133,63,0.4)] transition-all duration-300 uppercase transform hover:-translate-y-1">
+                REGISTER TO VOTE ONLINE NOW
+            </a>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-24 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="lg:col-span-5">
+            <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Our Strategic Mandate</span>
+            <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2 mb-6">Our Mission</h2>
+            <p class="text-white/70 font-light text-lg leading-relaxed">
+                To build a united, non‑racial, non‑sexist and democratic Mpumalanga.
+            </p>
+        </div>
+        <div class="lg:col-span-7">
+            <div class="glass-panel p-8 rounded-3xl shadow-xl">
+                <div class="text-[#FFD700] font-bold tracking-wide uppercase text-lg md:text-2xl mb-3">Our Strategic Vision</div>
+                <p class="text-white/70 text-base font-light leading-relaxed">
+                    Through community outreach like Letsema, we foster unity and development. Led by Chief Whip Eva Makhabane, we ensure accountability and advance radical economic transformation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid Component -->
+    <section id="news" class="py-24 bg-[#161616] border-y border-white/5">
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Insights & Dispatches</span>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2">Latest News</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel rounded-2xl overflow-hidden group hover:bg-white/[0.04] transition-all flex flex-col h-full">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="news1.jpg" alt="SOPA" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="image-rendering:-webkit-optimize-contrast;">
+                        <div class="absolute inset-0 pixel-mask opacity-20"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2 group-hover:text-[#FFD700]">State of the Province</h3>
+                            <p class="text-white/60 text-sm font-light mb-6">Premier outlines 2025 priorities.</p>
+                        </div>
+                        <a href="#" class="inline-block py-2.5 px-5 rounded-full bg-[#00853F] text-xs font-bold uppercase tracking-wide text-white self-start">Read More</a>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl overflow-hidden group hover:bg-white/[0.04] transition-all flex flex-col h-full">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="news2.jpg" alt="Tree Planting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="image-rendering:-webkit-optimize-contrast;">
+                        <div class="absolute inset-0 pixel-mask opacity-20"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2 group-hover:text-[#FFD700]">Letsema Tree Planting</h3>
+                            <p class="text-white/60 text-sm font-light mb-6">2,000 trees planted in Ehlanzeni.</p>
+                        </div>
+                        <a href="#" class="inline-block py-2.5 px-5 rounded-full bg-[#00853F] text-xs font-bold uppercase tracking-wide text-white self-start">Read More</a>
+                    </div>
+                </div>
+                <div class="glass-panel rounded-2xl overflow-hidden group hover:bg-white/[0.04] transition-all flex flex-col h-full">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="news3.jpg" alt="Leadership" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="image-rendering:-webkit-optimize-contrast;">
+                        <div class="absolute inset-0 pixel-mask opacity-20"></div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-white font-bold text-lg mb-2 group-hover:text-[#FFD700]">Chief Whip's Message</h3>
+                            <p class="text-white/60 text-sm font-light mb-6">Unity and service delivery for all.</p>
+                        </div>
+                        <a href="#" class="inline-block py-2.5 px-5 rounded-full bg-[#00853F] text-xs font-bold uppercase tracking-wide text-white self-start">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Feed Component (Facebook) -->
+    <section id="live" class="py-24 bg-[#161616] border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Live Updates</span>
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2">Live Updates from ANC Mpumalanga Caucus</h2>
+                <p class="text-white/60 text-base font-light mt-3">Automatically pulled from our official Facebook page.</p>
+            </div>
+
+            <div class="glass-panel rounded-3xl p-6 md:p-8 shadow-2xl">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-2xl overflow-hidden border border-white/10 bg-black/30 flex items-center justify-center">
+                            <span class="text-[#FFD700] text-sm font-black">FB</span>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Live Feed</h3>
+                            <p class="text-white/50 text-sm">Newest posts first</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button id="live-refresh" type="button" class="px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-[#00853F] hover:bg-[#007035] text-white shadow transition-all">
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <div id="live-status" class="hidden mb-5 text-sm text-white/70">Loading…</div>
+                <div id="live-error" class="hidden mb-5 text-sm text-[#FFD700]">Unable to load the live feed right now.</div>
+
+                <div id="live-feed" class="space-y-5"></div>
+
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button id="live-load-more" type="button" class="px-8 py-3 rounded-full text-xs font-black tracking-widest bg-[#00853F] hover:bg-[#007035] text-white shadow-lg transition-all uppercase">
+                        Load More
+                    </button>
+                    <div id="live-end" class="hidden text-white/50 text-sm">No more posts.</div>
+                </div>
+
+                <div id="live-sentinel" class="h-1 w-full mt-10"></div>
+
+                <template id="live-post-template">
+                    <article class="group p-5 rounded-2xl border border-white/10 bg-black/20 hover:bg-white/[0.04] transition-all">
+                        <div class="flex items-start gap-4">
+                            <img class="live-avatar w-12 h-12 rounded-xl object-cover border border-white/10 bg-black/30" alt="Avatar">
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                                    <p class="live-author text-white font-bold text-sm"></p>
+                                    <span class="live-timestamp text-white/50 text-xs"></span>
+                                    <a class="live-permalink text-[#FFD700] text-xs font-bold uppercase tracking-wider hover:underline" target="_blank" rel="noopener noreferrer">View</a>
+                                </div>
+
+                                <p class="live-message text-white/80 text-sm mt-2 leading-relaxed whitespace-pre-wrap"></p>
+
+                                <div class="live-media mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+
+                                <div class="live-links mt-4 space-y-2"></div>
+                            </div>
+                        </div>
+                    </article>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Carousel Ribbon Layer -->
+    <section id="moments" class="py-24 overflow-hidden bg-black">
+
+        <div class="max-w-7xl mx-auto px-6 mb-12">
+            <span class="text-[#FFD700] text-xs font-bold uppercase tracking-widest block text-center">Visual Timeline Stream</span>
+            <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mt-2 text-center">Moments That Matter</h2>
+        </div>
+
+        <div class="w-full relative flex items-center py-6 bg-[#111111] border-y border-white/5">
+            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="animate-strip-loop space-x-6 flex items-center">
+                <!-- Visual Frame Set 1 -->
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment1.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Letsema Community Outreach</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment2.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Caucus Leadership Meeting</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment3.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Celebrating Unity</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment4.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Provincial General Council</div>
+                </div>
+
+                <!-- Duplicate Loop Buffer for Seamless Visual Execution -->
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment5.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Letsema Community Outreach</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment6.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Caucus Leadership Meeting</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment1.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Celebrating Unity</div>
+                </div>
+                <div class="w-80 h-52 rounded-2xl overflow-hidden shrink-0 relative group border border-white/10 shadow-lg">
+                    <img src="moment2.jpg" class="w-full h-full object-cover" style="image-rendering:-webkit-optimize-contrast;">
+                    <div class="absolute inset-0 bg-black/75 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 text-center text-xs font-bold text-[#FFD700]">Provincial General Council</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Embedded Media Interface Layer -->
+    <section class="py-24 bg-[#161616] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white mb-4">Mpumalanga Provincial Caucus Highlight</h2>
+            <p class="text-white/60 text-base font-light max-w-2xl mx-auto mb-12">
+                Watch the official highlight reel of the ANC Mpumalanga Caucus in action.
+            </p>
+
+            <div class="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black group">
+                <div id="video-placeholder" class="absolute inset-0 bg-cover bg-center flex items-center justify-center z-10 cursor-pointer" style="background-image: url('https://img.youtube.com/vi/hI-OdjHLDRM/maxresdefault.jpg');">
+                    <button onclick="loadActiveVideo()" class="w-20 h-20 rounded-full bg-[#FFD700] text-black shadow-2xl flex items-center justify-center text-2xl transform transition-transform group-hover:scale-110">
+                        <i class="fas fa-play ml-1"></i>
+                    </button>
+                </div>
+                <div id="video-frame-target" class="w-full h-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Footer Interface Suite -->
+    <footer class="footer-banner-pattern border-t border-white/10 pt-16 pb-12 relative">
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-12 border-b border-white/10">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 max-w-xl">
+                    <img src="anclogo.jpg" class="w-16 h-20 object-contain shrink-0" alt="ANC Logo">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white uppercase">I VOTE ANC. WE VOTE ANC.</h3>
+                        <p class="text-white/60 text-sm mt-1.5 font-light leading-relaxed">
+                            South Africa's national liberation movement, building communities, creating opportunities, moving forward together.
+                        </p>
+                        <span class="text-[#FFD700] italic font-semibold text-sm block mt-2">A better life for all!</span>
+                    </div>
+                </div>
+                
+                <!-- Explicit Actions Segment -->
+                <div class="flex flex-wrap items-center justify-center gap-4 w-full lg:w-auto">
+                    <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg bg-[#FFD700] text-black font-black text-xs tracking-wider uppercase flex items-center space-x-2 hover:bg-white transition-all w-full sm:w-auto justify-center">
+                        <span>REGISTER TO VOTE</span> <i class="fas fa-arrow-right text-[9px]"></i>
+                    </a>
+                    <a href="https://www.anc1912.org.za" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg bg-[#00853F] text-white font-black text-xs tracking-wider uppercase hover:bg-[#009647] transition-all w-full sm:w-auto justify-center">
+                        JOIN THE MOVEMENT
+                    </a>
+                    <a href="https://wa.me/27137661234" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg border border-white/20 bg-black/40 text-white font-black text-xs tracking-wider uppercase hover:bg-white/10 transition-all w-full sm:w-auto justify-center">
+                        WHATSAPP
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 text-center md:text-left">
+                <p class="text-xs text-white/40">&copy; 2026 ANC Mpumalanga Caucus. All rights reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="https://www.facebook.com/AncMpumalangaProvince" target="_blank" rel="noopener noreferrer" class="opacity-40 hover:opacity-100 transition-opacity"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="w-5 h-5" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@anc.mpumalanga.caucus" target="_blank" rel="noopener noreferrer" class="text-white opacity-40 hover:opacity-100 transition-opacity"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg></a>
+                    <a href="https://www.youtube.com/c/MyANC" target="_blank" rel="noopener noreferrer" class="opacity-40 hover:opacity-100 transition-opacity"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="w-5 h-5" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logic Controller Scripts -->
+    <script>
+        // Track visual scroll position
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 60) {
+                navbar.classList.add('py-4', 'bg-[#111111]/95', 'backdrop-blur-md', 'border-b', 'border-white/5');
+                navbar.classList.remove('py-6', 'bg-transparent');
+            } else {
+                navbar.classList.remove('py-4', 'bg-[#111111]/95', 'backdrop-blur-md', 'border-b', 'border-white/5');
+                navbar.classList.add('py-6', 'bg-transparent');
+            }
+        });
+
+        // Responsive Sidebar Drawer Trigger
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+        mobileToggle.addEventListener('click', toggleMenu);
+
+        // Core Countdown Initialization Engine
+        function initTargetElectionCountdown() {
+            const targetDate = new Date('November 1, 2026 00:00:00').getTime();
+
+            const elDays = document.getElementById('days');
+            const elHours = document.getElementById('hours');
+            const elMinutes = document.getElementById('minutes');
+            const elSeconds = document.getElementById('seconds');
+
+            if (!elDays || !elHours || !elMinutes || !elSeconds) return;
+
+            function tick() {
+                const now = Date.now();
+                const diff = targetDate - now;
+
+                if (diff <= 0) {
+                    elDays.innerText = '000';
+                    elHours.innerText = '00';
+                    elMinutes.innerText = '00';
+                    elSeconds.innerText = '00';
+                    return;
+                }
+
+                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                elDays.innerText = String(d).padStart(3, '0');
+                elHours.innerText = String(h).padStart(2, '0');
+                elMinutes.innerText = String(m).padStart(2, '0');
+                elSeconds.innerText = String(s).padStart(2, '0');
+            }
+
+            tick();
+            setInterval(tick, 1000);
+        }
+
+
+        function loadActiveVideo() {
+            const frameTarget = document.getElementById('video-frame-target');
+            const placeholder = document.getElementById('video-placeholder');
+            
+            placeholder.style.display = 'none';
+            frameTarget.innerHTML = `
+                <iframe class="w-full h-full" 
+                        src="https://www.youtube.com/embed/hI-OdjHLDRM?autoplay=1&rel=0" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>`;
+        }
+
+        // Live Feed (Facebook) - requires a serverless proxy endpoint at /api/facebook-live-feed
+        const LIVE_ENDPOINT = '/api/facebook-live-feed';
+        const LIVE_PAGE_SIZE = 6;
+
+        function escapeHtml(str) {
+            return String(str ?? '')
+                .replaceAll('&', '&amp;')
+                .replaceAll('<', '<')
+                .replaceAll('>', '>')
+                .replaceAll('"', '"')
+                .replaceAll("'", '&#039;');
+        }
+
+
+        function formatTimestamp(ts) {
+            const d = ts ? new Date(ts) : null;
+            if (!d || isNaN(d.getTime())) return '';
+            return d.toLocaleString(undefined, { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+        }
+
+        function renderMedia(post, mediaWrap) {
+            const media = Array.isArray(post.media) ? post.media : [];
+            if (!media.length) return;
+
+            mediaWrap.innerHTML = '';
+
+            for (const item of media) {
+                const kind = item?.type;
+                if (kind === 'photo' && item?.url) {
+                    const img = document.createElement('img');
+                    img.src = item.url;
+                    img.alt = item.alt || post.message_preview || 'Facebook photo';
+                    img.className = 'w-full h-44 sm:h-36 rounded-2xl object-cover border border-white/10 bg-black/30';
+                    img.loading = 'lazy';
+                    mediaWrap.appendChild(img);
+                } else if (kind === 'video' && item?.embed_url) {
+                    const iframe = document.createElement('iframe');
+                    iframe.src = item.embed_url;
+                    iframe.className = 'w-full h-56 sm:h-44 rounded-2xl border border-white/10 bg-black/30';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                    iframe.loading = 'lazy';
+                    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+                    mediaWrap.appendChild(iframe);
+                }
+            }
+        }
+
+        function renderLinks(post, linksWrap) {
+            const links = Array.isArray(post.links) ? post.links : [];
+            if (!links.length) return;
+
+            linksWrap.innerHTML = '';
+            for (const l of links.slice(0, 3)) {
+                const a = document.createElement('a');
+                a.href = l?.url || '#';
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.className = 'block text-xs font-bold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors';
+                a.textContent = l?.title ? l.title : (l?.url || 'Open link');
+                linksWrap.appendChild(a);
+            }
+        }
+
+        async function fetchLivePage(cursor) {
+            const url = new URL(LIVE_ENDPOINT, window.location.origin);
+            url.searchParams.set('limit', String(LIVE_PAGE_SIZE));
+            if (cursor) url.searchParams.set('cursor', String(cursor));
+
+            const res = await fetch(url.toString(), { headers: { 'Accept': 'application/json' } });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
+        }
+
+        function normalizePostShape(raw) {
+            // Expected from proxy:
+            // { id, author_name, author_profile_url, created_time, message, media:[{type:'photo'|'video',url,embed_url,alt}], links:[{url,title}] , permalink }
+            return {
+                id: raw?.id,
+                author_name: raw?.author_name || raw?.from?.name || '',
+                author_profile_url: raw?.author_profile_url || raw?.from?.picture?.data?.url || '',
+                created_time: raw?.created_time || raw?.created_time_iso || raw?.timestamp || '',
+                message: raw?.message || raw?.message_text || raw?.story || '',
+                permalink: raw?.permalink || raw?.url || '#',
+                media: raw?.media || [],
+                links: raw?.links || [],
+                message_preview: (raw?.message || raw?.message_text || '').slice(0, 90)
+            };
+        }
+
+        let liveCursor = null;
+        let liveLoading = false;
+        let liveHasMore = true;
+        let liveObserver = null;
+
+        function setLiveStatus(kind) {
+            const status = document.getElementById('live-status');
+            const err = document.getElementById('live-error');
+            if (!status || !err) return;
+
+            if (kind === 'loading') {
+                status.classList.remove('hidden');
+                err.classList.add('hidden');
+            } else if (kind === 'error') {
+                status.classList.add('hidden');
+                err.classList.remove('hidden');
+            } else {
+                status.classList.add('hidden');
+                err.classList.add('hidden');
+            }
+        }
+
+        function appendPosts(posts) {
+            const wrap = document.getElementById('live-feed');
+            const tmpl = document.getElementById('live-post-template');
+            if (!wrap || !tmpl) return;
+
+            for (const raw of posts) {
+                const post = normalizePostShape(raw);
+                const node = tmpl.content.cloneNode(true);
+
+                const avatar = node.querySelector('.live-avatar');
+                const authorEl = node.querySelector('.live-author');
+                const tsEl = node.querySelector('.live-timestamp');
+                const msgEl = node.querySelector('.live-message');
+                const permalinkEl = node.querySelector('.live-permalink');
+                const mediaWrap = node.querySelector('.live-media');
+                const linksWrap = node.querySelector('.live-links');
+
+                if (avatar && post.author_profile_url) avatar.src = post.author_profile_url;
+                if (avatar && !post.author_profile_url) avatar.alt = 'Avatar';
+                if (authorEl) authorEl.textContent = post.author_name || 'ANC Mpumalanga';
+                if (tsEl) tsEl.textContent = formatTimestamp(post.created_time) || '';
+                if (msgEl) msgEl.textContent = post.message || '';
+                if (permalinkEl) permalinkEl.href = post.permalink || '#';
+
+                renderMedia(post, mediaWrap);
+                renderLinks(post, linksWrap);
+
+                wrap.appendChild(node);
+            }
+        }
+
+        async function loadMoreLive({ reset = false } = {}) {
+            if (liveLoading) return;
+            if (!liveHasMore && !reset) return;
+
+            liveLoading = true;
+            setLiveStatus(reset ? 'loading' : 'loading');
+
+            const wrap = document.getElementById('live-feed');
+            const endEl = document.getElementById('live-end');
+            const btn = document.getElementById('live-load-more');
+
+            try {
+                if (reset) {
+                    if (wrap) wrap.innerHTML = '';
+                    liveCursor = null;
+                    liveHasMore = true;
+                    if (endEl) endEl.classList.add('hidden');
+                }
+
+                if (btn) btn.disabled = true;
+
+                const data = await fetchLivePage(liveCursor);
+                // Expected from proxy:
+                // { posts: [...], next_cursor: '...'|null, has_more: boolean }
+                const posts = Array.isArray(data?.posts) ? data.posts : [];
+                const nextCursor = data?.next_cursor ?? null;
+                const hasMore = data?.has_more ?? (posts.length === LIVE_PAGE_SIZE);
+
+                if (posts.length) {
+                    appendPosts(posts);
+                }
+
+                liveCursor = nextCursor;
+                liveHasMore = Boolean(hasMore && (posts.length > 0) || (nextCursor));
+
+                setLiveStatus('ok');
+
+                if (endEl) {
+                    if (!liveHasMore) endEl.classList.remove('hidden');
+                    else endEl.classList.add('hidden');
+                }
+            } catch (e) {
+                setLiveStatus('error');
+                const err = document.getElementById('live-error');
+                if (err) err.textContent = 'Unable to load the live feed right now.';
+                console.error('Live feed error:', e);
+            } finally {
+                liveLoading = false;
+                if (btn) btn.disabled = false;
+            }
+        }
+
+        function initLiveFeed() {
+            const sentinel = document.getElementById('live-sentinel');
+            const btn = document.getElementById('live-load-more');
+            const refresh = document.getElementById('live-refresh');
+
+            if (btn) btn.addEventListener('click', () => loadMoreLive({ reset: false }));
+            if (refresh) refresh.addEventListener('click', () => loadMoreLive({ reset: true }));
+
+            if (sentinel && 'IntersectionObserver' in window) {
+                liveObserver = new IntersectionObserver((entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            loadMoreLive({ reset: false });
+                        }
+                    }
+                }, { root: null, rootMargin: '200px', threshold: 0 });
+                liveObserver.observe(sentinel);
+            }
+
+            loadMoreLive({ reset: true });
+        }
+
+        // Run initialization routines
+        initTargetElectionCountdown();
+        initLiveFeed();
+    </script>
+</body>
+</html>

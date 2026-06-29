@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – ANC Mpumalanga Caucus</title>
+    
+    <meta name="description" content="Get in touch with the Office of the Chief Whip – ANC Mpumalanga Caucus.">
+    <meta name="theme-color" content="#00853F">
+
+    <!-- Tailwind CSS Engine -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome Vector Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .pixel-mask {
+            background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1px);
+            background-size: 4px 4px;
+        }
+
+        .footer-banner-pattern {
+            background-color: #0d0d0d;
+            background-image: 
+                linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414),
+                linear-gradient(45deg, #141414 25%, transparent 25%, transparent 75%, #141414 75%, #141414);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111111;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00853F;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#00853F] selection:text-white overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <nav id="navbar" class="w-full py-6 bg-[#111111] border-b border-white/5 sticky top-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-xl bg-cover bg-center border border-[#FFD700]/40 shadow-xl" style="background-image: url('anclogo.jpg')"></div>
+                <span class="font-bold tracking-tight text-base sm:text-lg text-white">ANC <span class="text-[#00853F]">Mpumalanga</span> Caucus</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html#home" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Home</a>
+                <a href="index.html#mission" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Mission</a>
+                <a href="index.html#news" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">News</a>
+                <a href="index.html#moments" class="text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-[#FFD700] transition-colors">Moments</a>
+                <a href="contact.html" class="text-xs font-semibold uppercase tracking-wider text-[#FFD700] transition-colors">Contact</a>
+                <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest bg-[#00853F] hover:bg-[#007035] text-white shadow-lg transition-transform">
+                    Register To Vote
+                </a>
+            </div>
+
+            <button id="mobile-menu-toggle" class="lg:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Drawer Nav Menu -->
+    <div id="mobile-menu" class="fixed inset-0 z-30 bg-[#111111]/98 backdrop-blur-xl hidden flex-col justify-center items-center space-y-8 text-center">
+        <a href="index.html#home" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Home</a>
+        <a href="index.html#mission" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Mission</a>
+        <a href="index.html#news" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">News</a>
+        <a href="index.html#moments" class="text-xl font-bold tracking-wide text-white" onclick="toggleMenu()">Moments</a>
+        <a href="contact.html" class="text-xl font-bold tracking-wide text-[#FFD700]">Contact</a>
+        <a href="https://registertovote.elections.org.za" target="_blank" class="px-8 py-3 rounded-full text-sm font-bold bg-[#00853F] text-white">Register to Vote</a>
+    </div>
+
+    <!-- Main Content Split Frame Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-6 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Contact Mechanics & Informational Stream -->
+        <div class="lg:col-span-5 space-y-8">
+            <div>
+                <span class="text-[#00853F] text-xs font-bold uppercase tracking-widest">Connect With Us</span>
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mt-2 mb-4">Official Inquiries</h1>
+                <p class="text-white/60 font-light text-sm leading-relaxed">
+                    Have questions or feedback? Reach out to the Office of the Chief Whip through our formal submission channels.
+                </p>
+            </div>
+
+            <!-- Sleek Vector Aesthetic Icon Node Blocks -->
+            <div class="space-y-4">
+                <div class="glass-panel p-5 rounded-2xl flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#00853F]/10 border border-[#00853F]/30 flex items-center justify-center text-[#00853F] shrink-0">
+                        <i class="fa-solid fa-location-dot text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs uppercase font-bold tracking-wider text-white/50">Headquarters Location</h4>
+                        <p class="text-sm font-medium text-white/90 mt-1">Government Complex, Building 1, Riverside Park, Mbombela, South Africa</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-5 rounded-2xl flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-[#FFD700]/10 border border-[#FFD700]/30 flex items-center justify-center text-[#FFD700] shrink-0">
+                        <i class="fa-solid fa-envelope text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs uppercase font-bold tracking-wider text-white/50">Electronic Mail</h4>
+                        <p class="text-sm font-medium text-white/90 mt-1">info@ancmpumalanga.org.za</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel p-5 rounded-2xl flex items-start space-x-4">
+                    <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/80 shrink-0">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs uppercase font-bold tracking-wider text-white/50">Telephone Protocol</h4>
+                        <p class="text-sm font-medium text-white/90 mt-1">+27 (0)13 766 1234</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrated High-Fidelity Embedded Google Map Framework -->
+            <div class="w-full aspect-video lg:aspect-square max-h-80 rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-black relative">
+                <iframe 
+                    class="w-full h-full grayscale opacity-75 filter contrast-125 invert"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.818456427382!2d30.967812176288764!3d-25.44438317755353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee84a44bbfb1d83%3A0xc3f8e5fbd2ec1ca!2sMpumalanga%20Provincial%20Government%20Complex!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    frameborder="0">
+                </iframe>
+                <div class="absolute inset-0 pixel-mask opacity-10 pointer-events-none"></div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Form Panel -->
+        <div class="lg:col-span-7">
+            <form action="#" method="POST" class="glass-panel p-8 md:p-10 rounded-3xl space-y-6 shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 pixel-mask opacity-5 pointer-events-none"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider font-bold text-white/60 mb-2">Full Name</label>
+                        <input type="text" required class="w-full px-5 py-3.5 bg-black/40 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-[#00853F] focus:ring-1 focus:ring-[#00853F] transition-all">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider font-bold text-white/60 mb-2">Email Address</label>
+                        <input type="email" required class="w-full px-5 py-3.5 bg-black/40 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-[#00853F] focus:ring-1 focus:ring-[#00853F] transition-all">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold text-white/60 mb-2">Subject Matter</label>
+                    <input type="text" required class="w-full px-5 py-3.5 bg-black/40 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-[#00853F] focus:ring-1 focus:ring-[#00853F] transition-all">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider font-bold text-white/60 mb-2">Message Description</label>
+                    <textarea rows="6" required class="w-full px-5 py-3.5 bg-black/40 border border-white/10 rounded-xl text-white text-sm focus:outline-none focus:border-[#00853F] focus:ring-1 focus:ring-[#00853F] transition-all resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl text-xs font-black tracking-widest bg-[#00853F] hover:bg-[#FFD700] hover:text-black uppercase text-white shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                    Transmit Message
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Unified Footer Interface Suite -->
+    <footer class="footer-banner-pattern border-t border-white/10 pt-16 pb-12 relative">
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 pb-12 border-b border-white/10">
+                <div class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-6 max-w-xl">
+                    <img src="anclogo.jpg" class="w-16 h-20 object-contain shrink-0" alt="ANC Logo">
+                    <div>
+                        <h3 class="text-xl font-bold tracking-tight text-white uppercase">I VOTE ANC. WE VOTE ANC.</h3>
+                        <p class="text-white/60 text-sm mt-1.5 font-light leading-relaxed">
+                            South Africa's national liberation movement, building communities, creating opportunities, moving forward together.
+                        </p>
+                        <span class="text-[#FFD700] italic font-semibold text-sm block mt-2">A better life for all!</span>
+                    </div>
+                </div>
+                
+                <!-- Explicit Actions Segment -->
+                <div class="flex flex-wrap items-center justify-center gap-4 w-full lg:w-auto">
+                    <a href="https://registertovote.elections.org.za" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg bg-[#FFD700] text-black font-black text-xs tracking-wider uppercase flex items-center space-x-2 hover:bg-white transition-all w-full sm:w-auto justify-center">
+                        <span>REGISTER TO VOTE</span> <i class="fas fa-arrow-right text-[9px]"></i>
+                    </a>
+                    <a href="https://www.anc1912.org.za" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg bg-[#00853F] text-white font-black text-xs tracking-wider uppercase hover:bg-[#009647] transition-all w-full sm:w-auto justify-center">
+                        JOIN THE MOVEMENT
+                    </a>
+                    <a href="https://wa.me/27137661234" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-lg border border-white/20 bg-black/40 text-white font-black text-xs tracking-wider uppercase hover:bg-white/10 transition-all w-full sm:w-auto justify-center">
+                        WHATSAPP
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 text-center md:text-left">
+                <p class="text-xs text-white/40">&copy; 2026 ANC Mpumalanga Caucus. All rights reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="https://www.facebook.com/AncMpumalangaProvince" target="_blank" rel="noopener noreferrer" class="opacity-40 hover:opacity-100 transition-opacity"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="w-5 h-5" alt="Facebook"></a>
+                    <a href="https://www.tiktok.com/@anc.mpumalanga.caucus" target="_blank" rel="noopener noreferrer" class="text-white opacity-40 hover:opacity-100 transition-opacity"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg></a>
+                    <a href="https://www.youtube.com/c/MyANC" target="_blank" rel="noopener noreferrer" class="opacity-40 hover:opacity-100 transition-opacity"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" class="w-5 h-5" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Menu Toggle Engine Script -->
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        }
+        mobileToggle.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
